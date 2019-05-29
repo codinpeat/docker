@@ -3,11 +3,11 @@ FROM node:10
 RUN npm install -g \
   sails
 
-RUN mkdir -p /sails/test-project
+RUN mkdir -p /sails/my-project
 WORKDIR /sails
-RUN sails new test-project --traditional
+RUN sails new my-project --traditional
 
-WORKDIR /sails/test-project
+WORKDIR /sails/my-project
 CMD ["sails", "lift"]
 
 
