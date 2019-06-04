@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app:
+    container_name: app
+    restart: always
+    build: .
+    command: ls
+    volumes:
+      - //C/Users/EWXJVXZ/Documents/Projects/Private/ttfn:/sails/my-projecte
+    links:
+      - mongondb
+  mongondb:
+    container_name: mongondb
+    image: mongo
+    volumes:
+      - .:/sails/db
